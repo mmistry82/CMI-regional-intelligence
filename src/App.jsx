@@ -482,7 +482,7 @@ function SiteHeader({ children }) {
               Chartered Management Institute
             </p>
             <h1 style={{ margin: 0, fontSize: 17, fontWeight: 700, color: "#1a1a1a", lineHeight: 1.2 }}>
-              Regional Board Intelligence Dashboard
+              Partnerships Dashboard
             </h1>
           </div>
         </div>
@@ -579,13 +579,14 @@ function RegionCard({ region, onClick, activeFocusFilters, statusFilter }) {
       borderRadius: 12, padding: "1rem 1.25rem", cursor: "pointer",
       transition: "box-shadow 0.15s, transform 0.1s",
       position: "relative", overflow: "hidden",
-      boxShadow: "0 1px 4px rgba(0,0,0,0.06)"
+      boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
+      display: "flex", flexDirection: "column"
     }}
       onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 6px 20px rgba(0,0,0,0.10)"; e.currentTarget.style.transform = "translateY(-1px)"; }}
       onMouseLeave={e => { e.currentTarget.style.boxShadow = "0 1px 4px rgba(0,0,0,0.06)"; e.currentTarget.style.transform = "none"; }}
     >
       <div style={{ position: "absolute", top: 0, left: 0, width: 5, bottom: 0, background: s.color, borderRadius: "12px 0 0 12px" }} />
-      <div style={{ paddingLeft: 10 }}>
+      <div style={{ paddingLeft: 10, display: "flex", flexDirection: "column", flex: 1 }}>
         <div style={{ marginBottom: 6 }}>
           <p style={{ fontWeight: 600, fontSize: 14, margin: 0, color: "#1a1a1a" }}>{region.name}</p>
         </div>
@@ -602,8 +603,8 @@ function RegionCard({ region, onClick, activeFocusFilters, statusFilter }) {
             ) : null;
           })}
         </div>
-        <div style={{ borderTop: "1px solid #f0f0ee", paddingTop: 8 }}>
-          <p style={{ margin: "0 0 7px", fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#999" }}>Current partnerships</p>
+        <div style={{ marginTop: "auto", borderTop: "1px solid #f0f0ee", paddingTop: 10 }}>
+          <p style={{ margin: "0 0 8px", fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#999" }}>Current partnerships</p>
           <div style={{ display: "flex", gap: 0 }}>
             {Object.entries({ established: 0, developing: 0, emerging: 0, target: 0 }).map(([k]) => {
               const count = region.employers.filter(e => e.status === k).length;
@@ -1139,13 +1140,10 @@ export default function App() {
                 }}>
                   <div style={{ position: "absolute", top: 0, left: 0, width: 5, bottom: 0, background: s.color, borderRadius: "12px 0 0 12px" }} />
                   <div style={{ paddingLeft: 10 }}>
-                    <p style={{ margin: "0 0 6px", fontWeight: 700, fontSize: 14, color: "#1a1a1a" }}>{r.name}</p>
-                    <StatusBadge status={r.status} small />
-                    <div style={{ marginTop: 10 }}>
-                      <a href={r.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, color: CMI_PINK, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 4, fontWeight: 600 }}>
-                        <i className="ti ti-external-link" style={{ fontSize: 12 }} aria-hidden="true" />View board
-                      </a>
-                    </div>
+                    <p style={{ margin: "0 0 10px", fontWeight: 700, fontSize: 14, color: "#1a1a1a" }}>{r.name}</p>
+                    <a href={r.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: 12, color: CMI_PINK, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 4, fontWeight: 600 }}>
+                      <i className="ti ti-external-link" style={{ fontSize: 12 }} aria-hidden="true" />View board
+                    </a>
                   </div>
                 </div>
               );
