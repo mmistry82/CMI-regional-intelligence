@@ -51,11 +51,11 @@ const REGIONS = [
     ],
     sme_context: "Over 98,000 SMEs operate across the East Midlands and Eastern region, representing the backbone of the local economy — particularly strong in food & drink, engineering, and creative industries.",
     board_members: [
-      { name: "Jessica Robins CMgr FCMI",  role: "Regional Chair",                       email: "eastmidlands@managers.org.uk" },
-      { name: "James Cartwright MCMI",      role: "Deputy Chair",                         email: "j.cartwright@placeholder.co.uk" },
-      { name: "Priya Nair CMgr MCMI",       role: "Board Member — HE Lead",               email: "p.nair@placeholder.co.uk" },
-      { name: "Tom Whitfield MCMI",         role: "Board Member — Apprenticeships",        email: "t.whitfield@placeholder.co.uk" },
-      { name: "Sandra Osei MCMI",           role: "Board Member — Diversity & Inclusion",  email: "s.osei@placeholder.co.uk" },
+      { name: "Jessica Robins CMgr FCMI", role: "Regional Chair",                      email: "eastmidlands@managers.org.uk",       skills: ["Strategic leadership", "Stakeholder engagement", "Organisational development"],  sectors: ["Manufacturing", "Engineering", "Professional services"] },
+      { name: "James Cartwright MCMI",    role: "Deputy Chair",                        email: "j.cartwright@placeholder.co.uk",     skills: ["Change management", "Commercial strategy", "Team leadership"],                    sectors: ["Logistics", "Retail", "Supply chain"] },
+      { name: "Priya Nair CMgr MCMI",     role: "Board Member — HE Lead",              email: "p.nair@placeholder.co.uk",           skills: ["Curriculum development", "Research leadership", "Partnership building"],           sectors: ["Higher education", "Research", "Public sector"] },
+      { name: "Tom Whitfield MCMI",       role: "Board Member — Apprenticeships",      email: "t.whitfield@placeholder.co.uk",      skills: ["Apprenticeship frameworks", "Skills development", "Employer engagement"],          sectors: ["Engineering", "Construction", "Advanced manufacturing"] },
+      { name: "Sandra Osei MCMI",         role: "Board Member — Diversity & Inclusion",email: "s.osei@placeholder.co.uk",           skills: ["Inclusive leadership", "Culture change", "Employee engagement"],                   sectors: ["Healthcare", "Charity & third sector", "Public sector"] },
     ],
     employers: [
       { name: "Rolls-Royce",             sector: "Engineering",    location: "Derby",        status: "established", focus: ["digital","apprenticeships"], contact: "Jessica Robins" },
@@ -87,12 +87,12 @@ const REGIONS = [
     ],
     sme_context: "London hosts over 400,000 SMEs, making it the UK's largest SME ecosystem. Strong concentration in tech, creative industries, and professional services.",
     board_members: [
-      { name: "Katie Sherwood CMgr MCMI", role: "Regional Chair",                       email: "london@managers.org.uk" },
-      { name: "Dominic Okafor FCMI",      role: "Deputy Chair",                         email: "d.okafor@placeholder.co.uk" },
-      { name: "Rachel Teng CMgr MCMI",    role: "Board Member — Future Leaders",         email: "r.teng@placeholder.co.uk" },
-      { name: "Marcus Hall MCMI",         role: "Board Member — Public Sector",          email: "m.hall@placeholder.co.uk" },
-      { name: "Aisha Patel CMgr MCMI",    role: "Board Member — Diversity & Inclusion",  email: "a.patel@placeholder.co.uk" },
-      { name: "Chris Delaney MCMI",       role: "Board Member — Financial Services",     email: "c.delaney@placeholder.co.uk" },
+      { name: "Katie Sherwood CMgr MCMI", role: "Regional Chair",                      email: "london@managers.org.uk",         skills: ["Executive leadership", "Financial services strategy", "Board governance"],          sectors: ["Financial services", "Professional services", "FinTech"] },
+      { name: "Dominic Okafor FCMI",      role: "Deputy Chair",                        email: "d.okafor@placeholder.co.uk",     skills: ["Operations management", "Digital transformation", "Risk management"],             sectors: ["Banking", "Insurance", "Technology"] },
+      { name: "Rachel Teng CMgr MCMI",    role: "Board Member — Future Leaders",       email: "r.teng@placeholder.co.uk",       skills: ["Coaching & mentoring", "Talent development", "Leadership programmes"],             sectors: ["Media", "Creative industries", "Higher education"] },
+      { name: "Marcus Hall MCMI",         role: "Board Member — Public Sector",        email: "m.hall@placeholder.co.uk",       skills: ["Public policy", "Programme delivery", "Ministerial engagement"],                   sectors: ["Central government", "Local authority", "NHS"] },
+      { name: "Aisha Patel CMgr MCMI",    role: "Board Member — Diversity & Inclusion",email: "a.patel@placeholder.co.uk",      skills: ["Equity strategy", "Community engagement", "Organisational culture"],              sectors: ["Charity & third sector", "Retail", "Education"] },
+      { name: "Chris Delaney MCMI",       role: "Board Member — Financial Services",   email: "c.delaney@placeholder.co.uk",    skills: ["Investment management", "Regulatory compliance", "Strategic planning"],            sectors: ["Asset management", "Banking", "Consulting"] },
     ],
     employers: [
       { name: "KPMG",                       sector: "Professional services", location: "Canary Wharf",   status: "established", focus: ["future_leaders","diversity"],  contact: "Katie Sherwood" },
@@ -124,10 +124,10 @@ const REGIONS = [
     ],
     sme_context: "Over 230,000 SMEs operate across the region, with a strong base in manufacturing, food production, and the growing digital and creative sectors in Leeds and Sheffield.",
     board_members: [
-      { name: "Vacancy — Regional Chair", role: "Regional Chair (being recruited)", email: "northeast@managers.org.uk" },
-      { name: "Helen Bradshaw MCMI",      role: "Interim Deputy Chair",             email: "h.bradshaw@placeholder.co.uk" },
-      { name: "Gareth Rees CMgr MCMI",   role: "Board Member — Apprenticeships",   email: "g.rees@placeholder.co.uk" },
-      { name: "Fatima Hussain MCMI",      role: "Board Member — Public Sector",     email: "f.hussain@placeholder.co.uk" },
+      { name: "Vacancy — Regional Chair", role: "Regional Chair (being recruited)",  email: "northeast@managers.org.uk",       skills: ["TBC", "TBC", "TBC"],                                                               sectors: ["TBC", "TBC", "TBC"] },
+      { name: "Helen Bradshaw MCMI",      role: "Interim Deputy Chair",              email: "h.bradshaw@placeholder.co.uk",   skills: ["Interim leadership", "Stakeholder management", "Strategic communications"],          sectors: ["Public sector", "Healthcare", "Education"] },
+      { name: "Gareth Rees CMgr MCMI",   role: "Board Member — Apprenticeships",    email: "g.rees@placeholder.co.uk",       skills: ["Apprenticeship delivery", "Employer partnerships", "Skills policy"],                sectors: ["Manufacturing", "Engineering", "Further education"] },
+      { name: "Fatima Hussain MCMI",      role: "Board Member — Public Sector",      email: "f.hussain@placeholder.co.uk",    skills: ["Service transformation", "Community leadership", "Policy implementation"],          sectors: ["Local government", "Social housing", "Charity"] },
     ],
     employers: [
       { name: "Leeds City Council",           sector: "Public sector",   location: "Leeds",    status: "established", focus: ["public_sector"],              contact: "Interim contact" },
@@ -158,10 +158,10 @@ const REGIONS = [
     ],
     sme_context: "Northern Ireland has approximately 75,000 SMEs, with growing clusters in fintech, cybersecurity, and agri-food, supported by Invest NI and cross-border all-island economic activity.",
     board_members: [
-      { name: "Dr Claire Dickson CMgr FCMI", role: "Regional Chair",              email: "northernireland@managers.org.uk" },
-      { name: "Niall McAlister MCMI",        role: "Deputy Chair",                email: "n.mcalister@placeholder.co.uk" },
-      { name: "Siobhan Doherty CMgr MCMI",   role: "Board Member — Public Sector",email: "s.doherty@placeholder.co.uk" },
-      { name: "Patrick Lavery MCMI",         role: "Board Member — SME & Digital", email: "p.lavery@placeholder.co.uk" },
+      { name: "Dr Claire Dickson CMgr FCMI", role: "Regional Chair",               email: "northernireland@managers.org.uk", skills: ["Academic leadership", "Research & innovation", "Cross-border collaboration"],       sectors: ["Higher education", "Research", "Public sector"] },
+      { name: "Niall McAlister MCMI",        role: "Deputy Chair",                 email: "n.mcalister@placeholder.co.uk",  skills: ["Business development", "SME growth", "Financial planning"],                        sectors: ["Professional services", "FinTech", "Agri-food"] },
+      { name: "Siobhan Doherty CMgr MCMI",   role: "Board Member — Public Sector", email: "s.doherty@placeholder.co.uk",    skills: ["Policy development", "Public administration", "Service reform"],                   sectors: ["Civil service", "Local government", "Healthcare"] },
+      { name: "Patrick Lavery MCMI",         role: "Board Member — SME & Digital", email: "p.lavery@placeholder.co.uk",     skills: ["Digital strategy", "Entrepreneurship", "Product development"],                     sectors: ["Technology", "Cybersecurity", "Start-ups"] },
     ],
     employers: [
       { name: "Ulster University",    sector: "Higher education",  location: "Belfast", status: "established", focus: ["he","future_leaders"],  contact: "Dr Claire Dickson" },
@@ -190,12 +190,12 @@ const REGIONS = [
     ],
     sme_context: "Scotland has around 340,000 SMEs, with notable strength in food & drink, renewables, tourism, and the growing tech corridor between Edinburgh and Glasgow.",
     board_members: [
-      { name: "Lesley Mitchell CMgr CCMI",  role: "Regional Chair",                       email: "scotland@managers.org.uk" },
-      { name: "Alasdair Fraser FCMI",        role: "Deputy Chair",                         email: "a.fraser@placeholder.co.uk" },
-      { name: "Catriona MacLeod CMgr MCMI", role: "Board Member — HE & Future Leaders",   email: "c.macleod@placeholder.co.uk" },
-      { name: "Ronan Gillespie MCMI",        role: "Board Member — Energy & Sustainability",email: "r.gillespie@placeholder.co.uk" },
-      { name: "Fiona Drummond CMgr MCMI",   role: "Board Member — Public Sector",          email: "f.drummond@placeholder.co.uk" },
-      { name: "Tariq Bashir MCMI",           role: "Board Member — Diversity & Inclusion",  email: "t.bashir@placeholder.co.uk" },
+      { name: "Lesley Mitchell CMgr CCMI",  role: "Regional Chair",                        email: "scotland@managers.org.uk",       skills: ["Executive leadership", "Devolved policy", "Strategic partnerships"],              sectors: ["Financial services", "Public sector", "Professional services"] },
+      { name: "Alasdair Fraser FCMI",        role: "Deputy Chair",                          email: "a.fraser@placeholder.co.uk",     skills: ["Corporate governance", "Business strategy", "Investor relations"],               sectors: ["Energy", "Natural resources", "Consulting"] },
+      { name: "Catriona MacLeod CMgr MCMI", role: "Board Member — HE & Future Leaders",    email: "c.macleod@placeholder.co.uk",    skills: ["Leadership development", "Academic management", "Student engagement"],           sectors: ["Higher education", "Skills & training", "Charity"] },
+      { name: "Ronan Gillespie MCMI",        role: "Board Member — Energy & Sustainability",email: "r.gillespie@placeholder.co.uk",  skills: ["Net zero strategy", "Project management", "Regulatory affairs"],                 sectors: ["Oil & gas", "Renewable energy", "Engineering"] },
+      { name: "Fiona Drummond CMgr MCMI",   role: "Board Member — Public Sector",          email: "f.drummond@placeholder.co.uk",   skills: ["Public service reform", "Performance management", "People strategy"],            sectors: ["Scottish Government", "NHS Scotland", "Local authorities"] },
+      { name: "Tariq Bashir MCMI",           role: "Board Member — Diversity & Inclusion",  email: "t.bashir@placeholder.co.uk",     skills: ["Cultural intelligence", "Anti-racism strategy", "Community development"],       sectors: ["Housing", "Social enterprise", "Education"] },
     ],
     employers: [
       { name: "Scottish Government",          sector: "Public sector",     location: "Edinburgh", status: "established", focus: ["public_sector","diversity"],  contact: "Lesley Mitchell" },
@@ -226,11 +226,11 @@ const REGIONS = [
     ],
     sme_context: "The South East has one of the UK's highest concentrations of SMEs — over 420,000 — driven by strong professional services, technology, and life sciences clusters.",
     board_members: [
-      { name: "Sarah Furness CMgr FCMI",   role: "Regional Chair",                       email: "southeast@managers.org.uk" },
-      { name: "Jonathan Blake MCMI",        role: "Deputy Chair",                         email: "j.blake@placeholder.co.uk" },
-      { name: "Mei-Lin Chang CMgr MCMI",   role: "Board Member — SME & Entrepreneurship",email: "m.chang@placeholder.co.uk" },
-      { name: "Oliver Watts MCMI",          role: "Board Member — Future Leaders",         email: "o.watts@placeholder.co.uk" },
-      { name: "Deborah Simmons CMgr MCMI", role: "Board Member — Defence & Aerospace",    email: "d.simmons@placeholder.co.uk" },
+      { name: "Sarah Furness CMgr FCMI",   role: "Regional Chair",                        email: "southeast@managers.org.uk",      skills: ["Strategic leadership", "Business growth", "Networking & partnerships"],           sectors: ["Aerospace & defence", "Professional services", "Technology"] },
+      { name: "Jonathan Blake MCMI",        role: "Deputy Chair",                          email: "j.blake@placeholder.co.uk",      skills: ["Commercial leadership", "M&A strategy", "Operational excellence"],               sectors: ["Pharmaceutical", "Life sciences", "Consulting"] },
+      { name: "Mei-Lin Chang CMgr MCMI",   role: "Board Member — SME & Entrepreneurship", email: "m.chang@placeholder.co.uk",      skills: ["Start-up growth", "Innovation strategy", "Venture development"],                 sectors: ["Technology", "E-commerce", "Creative industries"] },
+      { name: "Oliver Watts MCMI",          role: "Board Member — Future Leaders",         email: "o.watts@placeholder.co.uk",      skills: ["Graduate development", "Coaching", "Leadership assessment"],                     sectors: ["Financial services", "Retail", "FMCG"] },
+      { name: "Deborah Simmons CMgr MCMI", role: "Board Member — Defence & Aerospace",    email: "d.simmons@placeholder.co.uk",    skills: ["Programme management", "Defence procurement", "STEM engagement"],               sectors: ["Defence", "Aerospace", "Engineering"] },
     ],
     employers: [
       { name: "BAE Systems",              sector: "Defence & Aerospace", location: "Farnborough",     status: "established", focus: ["digital","apprenticeships"],  contact: "Sarah Furness" },
@@ -261,11 +261,11 @@ const REGIONS = [
     ],
     sme_context: "Around 245,000 SMEs call the South West home, with particular strength in agri-food, tourism, marine industries, and a rapidly growing green energy and tech sector centred on Bristol.",
     board_members: [
-      { name: "Martin Perry CMgr FCMI", role: "Regional Chair",                      email: "southwest@managers.org.uk" },
-      { name: "Elaine Goodwin MCMI",    role: "Deputy Chair",                        email: "e.goodwin@placeholder.co.uk" },
-      { name: "Ben Truscott CMgr MCMI", role: "Board Member — Sustainability & Energy",email: "b.truscott@placeholder.co.uk" },
-      { name: "Yemi Adeyemi MCMI",      role: "Board Member — HE & Skills",          email: "y.adeyemi@placeholder.co.uk" },
-      { name: "Karen Pascoe MCMI",      role: "Board Member — SME & Rural Enterprise",email: "k.pascoe@placeholder.co.uk" },
+      { name: "Martin Perry CMgr FCMI", role: "Regional Chair",                       email: "southwest@managers.org.uk",      skills: ["Regional economic strategy", "Infrastructure leadership", "Business advocacy"],    sectors: ["Aerospace", "Ports & logistics", "Property"] },
+      { name: "Elaine Goodwin MCMI",    role: "Deputy Chair",                         email: "e.goodwin@placeholder.co.uk",    skills: ["Financial management", "Governance", "Risk & compliance"],                        sectors: ["Financial services", "Professional services", "Education"] },
+      { name: "Ben Truscott CMgr MCMI", role: "Board Member — Sustainability & Energy",email: "b.truscott@placeholder.co.uk", skills: ["Carbon reduction strategy", "Energy systems", "Environmental management"],        sectors: ["Renewable energy", "Environmental consultancy", "Engineering"] },
+      { name: "Yemi Adeyemi MCMI",      role: "Board Member — HE & Skills",           email: "y.adeyemi@placeholder.co.uk",    skills: ["Curriculum strategy", "Student outcomes", "Widening participation"],              sectors: ["Higher education", "Further education", "Skills"] },
+      { name: "Karen Pascoe MCMI",      role: "Board Member — SME & Rural Enterprise",email: "k.pascoe@placeholder.co.uk",    skills: ["Rural business development", "Agri-food sector", "Community enterprise"],         sectors: ["Agriculture", "Food & drink", "Tourism"] },
     ],
     employers: [
       { name: "Airbus UK",              sector: "Aerospace",          location: "Filton",           status: "established", focus: ["digital","apprenticeships"],  contact: "Martin Perry" },
@@ -296,11 +296,11 @@ const REGIONS = [
     ],
     sme_context: "Wales has approximately 140,000 SMEs, with clusters in agri-food, advanced manufacturing, and a growing tech scene in Cardiff. Welsh Government support programmes play a significant enabling role.",
     board_members: [
-      { name: "Bethan Owen CMgr MCMI", role: "Regional Chair",                         email: "wales@managers.org.uk" },
-      { name: "Rhys Griffiths MCMI",   role: "Deputy Chair",                           email: "r.griffiths@placeholder.co.uk" },
-      { name: "Sioned Parry CMgr MCMI",role: "Board Member — Public Sector",           email: "s.parry@placeholder.co.uk" },
-      { name: "Ceri Thomas MCMI",      role: "Board Member — HE & Welsh Language",     email: "c.thomas@placeholder.co.uk" },
-      { name: "Imogen Davies MCMI",    role: "Board Member — Digital & Future Leaders",email: "i.davies@placeholder.co.uk" },
+      { name: "Bethan Owen CMgr MCMI", role: "Regional Chair",                          email: "wales@managers.org.uk",          skills: ["Bilingual leadership", "Welsh public policy", "Stakeholder engagement"],           sectors: ["Public sector", "Welsh Government", "Professional services"] },
+      { name: "Rhys Griffiths MCMI",   role: "Deputy Chair",                            email: "r.griffiths@placeholder.co.uk",  skills: ["Commercial strategy", "Business transformation", "P&L management"],             sectors: ["Financial services", "Insurance", "Technology"] },
+      { name: "Sioned Parry CMgr MCMI",role: "Board Member — Public Sector",            email: "s.parry@placeholder.co.uk",      skills: ["Policy implementation", "Equalities", "Service design"],                        sectors: ["Local government", "NHS Wales", "Education"] },
+      { name: "Ceri Thomas MCMI",      role: "Board Member — HE & Welsh Language",      email: "c.thomas@placeholder.co.uk",     skills: ["Welsh medium education", "Academic leadership", "Cultural engagement"],          sectors: ["Higher education", "Further education", "Arts & culture"] },
+      { name: "Imogen Davies MCMI",    role: "Board Member — Digital & Future Leaders", email: "i.davies@placeholder.co.uk",     skills: ["Digital product management", "Youth leadership", "Agile delivery"],              sectors: ["Technology", "Start-ups", "Media"] },
     ],
     employers: [
       { name: "Welsh Government",  sector: "Public sector",       location: "Cardiff", status: "established", focus: ["public_sector","diversity"],  contact: "Bethan Owen" },
@@ -330,13 +330,13 @@ const REGIONS = [
     ],
     sme_context: "The combined region is home to over 380,000 SMEs — one of the UK's largest — spanning advanced manufacturing, logistics, the visitor economy, and a rapidly expanding fintech sector in Manchester.",
     board_members: [
-      { name: "Elizabeth Oni-Iyiola CMgr CCMI", role: "Regional Chair",                          email: "westmidlands@managers.org.uk" },
-      { name: "Craig Mossop FCMI",               role: "Deputy Chair",                            email: "c.mossop@placeholder.co.uk" },
-      { name: "Nneka Obi CMgr MCMI",             role: "Board Member — Diversity & Inclusion",    email: "n.obi@placeholder.co.uk" },
-      { name: "Will Ashton MCMI",                role: "Board Member — Apprenticeships",          email: "w.ashton@placeholder.co.uk" },
-      { name: "Sameera Khan CMgr MCMI",          role: "Board Member — Future Leaders",           email: "s.khan@placeholder.co.uk" },
-      { name: "David Lowe MCMI",                 role: "Board Member — Digital Leadership",       email: "d.lowe@placeholder.co.uk" },
-      { name: "Janet Corbett CMgr MCMI",         role: "Board Member — Manufacturing & Automotive",email: "j.corbett@placeholder.co.uk" },
+      { name: "Elizabeth Oni-Iyiola CMgr CCMI", role: "Regional Chair",                           email: "westmidlands@managers.org.uk",   skills: ["Inclusive leadership", "Board-level strategy", "Organisational transformation"],   sectors: ["Financial services", "Professional services", "Education"] },
+      { name: "Craig Mossop FCMI",               role: "Deputy Chair",                             email: "c.mossop@placeholder.co.uk",     skills: ["Operations strategy", "Supply chain", "Business improvement"],                    sectors: ["Automotive", "Manufacturing", "Logistics"] },
+      { name: "Nneka Obi CMgr MCMI",             role: "Board Member — Diversity & Inclusion",     email: "n.obi@placeholder.co.uk",        skills: ["Equity, diversity & inclusion", "Allyship programmes", "Culture change"],         sectors: ["Media", "Retail", "Charity"] },
+      { name: "Will Ashton MCMI",                role: "Board Member — Apprenticeships",           email: "w.ashton@placeholder.co.uk",     skills: ["Apprenticeship levy strategy", "Workforce planning", "Skills ecosystems"],        sectors: ["Engineering", "Advanced manufacturing", "Further education"] },
+      { name: "Sameera Khan CMgr MCMI",          role: "Board Member — Future Leaders",            email: "s.khan@placeholder.co.uk",       skills: ["Talent management", "Mentoring", "Graduate programmes"],                         sectors: ["Technology", "Consulting", "Higher education"] },
+      { name: "David Lowe MCMI",                 role: "Board Member — Digital Leadership",        email: "d.lowe@placeholder.co.uk",       skills: ["Digital transformation", "Data strategy", "Cyber resilience"],                   sectors: ["Technology", "Financial services", "Public sector"] },
+      { name: "Janet Corbett CMgr MCMI",         role: "Board Member — Manufacturing & Automotive",email: "j.corbett@placeholder.co.uk",   skills: ["Lean manufacturing", "Quality management", "International supply chains"],       sectors: ["Automotive", "Aerospace", "Industrial engineering"] },
     ],
     employers: [
       { name: "Jaguar Land Rover",                 sector: "Automotive",      location: "Coventry",    status: "established", focus: ["digital","apprenticeships"],   contact: "Elizabeth Oni-Iyiola" },
@@ -696,38 +696,66 @@ function RegionDetail({ region, onBack, activeFocusFilters, setActiveFocusFilter
           {activeTab === "board" && (
             <div>
               <p style={{ fontSize: 13, color: "#777", margin: "0 0 14px" }}>
-                {region.board_members.length} member{region.board_members.length !== 1 ? "s" : ""} · contact details are illustrative placeholders for demo purposes
+                {region.board_members.length} member{region.board_members.length !== 1 ? "s" : ""} · contact details and profile data are illustrative placeholders for demo purposes
               </p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                 {region.board_members.map((m, i) => (
                   <div key={i} style={{
-                    display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12,
                     background: i === 0 ? CMI_PINK_LIGHT : PAGE_BG,
-                    borderRadius: 10, padding: "0.875rem 1rem",
+                    borderRadius: 10, padding: "1rem 1.1rem",
                     border: i === 0 ? `1.5px solid ${CMI_PINK_MID}` : "1.5px solid #e4e4e0",
                   }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                      <div style={{
-                        width: 38, height: 38, borderRadius: "50%", flexShrink: 0,
-                        background: i === 0 ? CMI_PINK : "#ddd",
-                        display: "flex", alignItems: "center", justifyContent: "center",
-                      }}>
-                        <i className="ti ti-user" style={{ fontSize: 16, color: i === 0 ? "#fff" : "#888" }} aria-hidden="true" />
+                    {/* Top row — avatar, name, role, email */}
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, marginBottom: 12 }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                        <div style={{
+                          width: 38, height: 38, borderRadius: "50%", flexShrink: 0,
+                          background: i === 0 ? CMI_PINK : "#ccc",
+                          display: "flex", alignItems: "center", justifyContent: "center",
+                        }}>
+                          <i className="ti ti-user" style={{ fontSize: 16, color: "#fff" }} aria-hidden="true" />
+                        </div>
+                        <div>
+                          <p style={{ margin: 0, fontWeight: 700, fontSize: 13, color: "#1a1a1a" }}>{m.name}</p>
+                          <p style={{ margin: 0, fontSize: 12, color: i === 0 ? CMI_PINK : "#666" }}>{m.role}</p>
+                        </div>
                       </div>
-                      <div>
-                        <p style={{ margin: 0, fontWeight: 700, fontSize: 13, color: "#1a1a1a" }}>{m.name}</p>
-                        <p style={{ margin: 0, fontSize: 12, color: i === 0 ? CMI_PINK : "#666" }}>{m.role}</p>
+                      <a href={`mailto:${m.email}`} style={{
+                        display: "inline-flex", alignItems: "center", gap: 5,
+                        fontSize: 12, color: CMI_PINK, textDecoration: "none",
+                        background: "#fff", border: `1.5px solid ${CMI_PINK_MID}`,
+                        borderRadius: 20, padding: "5px 12px", whiteSpace: "nowrap", flexShrink: 0, fontWeight: 600
+                      }}>
+                        <i className="ti ti-mail" style={{ fontSize: 12 }} aria-hidden="true" />
+                        Email
+                      </a>
+                    </div>
+                    {/* Skills & sectors */}
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+                      <div style={{ background: "#fff", borderRadius: 8, padding: "0.7rem 0.9rem" }}>
+                        <p style={{ margin: "0 0 6px", fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#999" }}>Key skills</p>
+                        <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                          {m.skills.map((s, si) => (
+                            <div key={si} style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                              <span style={{ width: 5, height: 5, borderRadius: "50%", background: CMI_PINK, flexShrink: 0 }} />
+                              <span style={{ fontSize: 12, color: "#333" }}>{s}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      <div style={{ background: "#fff", borderRadius: 8, padding: "0.7rem 0.9rem" }}>
+                        <p style={{ margin: "0 0 6px", fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#999" }}>Main sector experience</p>
+                        <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
+                          {m.sectors.map((s, si) => (
+                            <span key={si} style={{
+                              fontSize: 11, background: CMI_PINK_LIGHT, color: CMI_PINK,
+                              border: `1px solid ${CMI_PINK_MID}`, borderRadius: 20,
+                              padding: "2px 9px", fontWeight: 600
+                            }}>{s}</span>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                    <a href={`mailto:${m.email}`} style={{
-                      display: "inline-flex", alignItems: "center", gap: 5,
-                      fontSize: 12, color: CMI_PINK, textDecoration: "none",
-                      background: "#fff", border: `1.5px solid ${CMI_PINK_MID}`,
-                      borderRadius: 20, padding: "5px 12px", whiteSpace: "nowrap", flexShrink: 0, fontWeight: 600
-                    }}>
-                      <i className="ti ti-mail" style={{ fontSize: 12 }} aria-hidden="true" />
-                      Email
-                    </a>
                   </div>
                 ))}
               </div>
