@@ -44,11 +44,20 @@ const REGIONS = [
     focus_targets: ["diversity","digital","sustainability"],
     top_employers: [
       { name: "Rolls-Royce", sector: "Engineering" },
+      { name: "University of Nottingham", sector: "Higher Education" },
       { name: "University of Leicester", sector: "Higher Education" },
-      { name: "DHL Supply Chain", sector: "Logistics" },
       { name: "Nottingham City Council", sector: "Public Sector" },
-      { name: "Anglian Water", sector: "Utilities" },
+      { name: "DHL Supply Chain", sector: "Logistics" },
     ],
+    county_employers: {
+      "Derbyshire":       [{ name: "Rolls-Royce", sector: "Engineering" }, { name: "Toyota Manufacturing UK", sector: "Automotive" }, { name: "DHL Supply Chain", sector: "Logistics" }],
+      "Leicestershire":   [{ name: "University of Leicester", sector: "Higher Education" }, { name: "Everards Brewery", sector: "Food & Drink" }, { name: "De Montfort University", sector: "Higher Education" }],
+      "Northamptonshire": [{ name: "Barclaycard (Northampton)", sector: "Financial Services" }, { name: "Avon Cosmetics", sector: "Consumer Goods" }, { name: "Wickes", sector: "Retail" }],
+      "Lincolnshire":     [{ name: "Co-op Food (HQ)", sector: "Retail" }, { name: "Siemens (Lincoln)", sector: "Engineering" }, { name: "Lincolnshire County Council", sector: "Public Sector" }],
+      "Cambridgeshire":   [{ name: "Anglian Water", sector: "Utilities" }, { name: "Cambridge University Hospitals", sector: "Healthcare" }, { name: "Peterborough City Council", sector: "Public Sector" }],
+      "Norfolk":          [{ name: "Norfolk & Norwich NHS", sector: "Healthcare" }, { name: "Aviva (Norwich)", sector: "Financial Services" }, { name: "Norfolk County Council", sector: "Public Sector" }],
+      "Suffolk":          [{ name: "BT (Adastral Park)", sector: "Technology" }, { name: "Ipswich Borough Council", sector: "Public Sector" }, { name: "Greene King", sector: "Hospitality" }],
+    },
     sme_context: "Over 98,000 SMEs operate across the East Midlands and Eastern region, representing the backbone of the local economy — particularly strong in food & drink, engineering, and creative industries.",
     board_members: [
       { name: "Jessica Robins CMgr FCMI", role: "Regional Chair",                      email: "eastmidlands@managers.org.uk",       skills: ["Strategic leadership", "Stakeholder engagement", "Organisational development"],  sectors: ["Manufacturing", "Engineering", "Professional services"] },
@@ -57,14 +66,15 @@ const REGIONS = [
       { name: "Tom Whitfield MCMI",       role: "Board Member — Apprenticeships",      email: "t.whitfield@placeholder.co.uk",      skills: ["Apprenticeship frameworks", "Skills development", "Employer engagement"],          sectors: ["Engineering", "Construction", "Advanced manufacturing"] },
       { name: "Sandra Osei MCMI",         role: "Board Member — Diversity & Inclusion",email: "s.osei@placeholder.co.uk",           skills: ["Inclusive leadership", "Culture change", "Employee engagement"],                   sectors: ["Healthcare", "Charity & third sector", "Public sector"] },
     ],
+    cmi_contact: { name: "Sarah Mitchell", title: "Partnership Manager — East Midlands & Eastern", email: "s.mitchell@managers.org.uk" },
     employers: [
-      { name: "Rolls-Royce",             sector: "Engineering",    location: "Derby",        status: "established", focus: ["digital","apprenticeships"], contact: "Jessica Robins" },
-      { name: "University of Leicester", sector: "Higher education",location: "Leicester",   status: "established", focus: ["he","future_leaders"],       contact: "Jessica Robins" },
-      { name: "DHL Supply Chain",        sector: "Logistics",      location: "Derby",        status: "developing",  focus: ["sme","apprenticeships"],      contact: "Jessica Robins" },
-      { name: "Nottingham City Council", sector: "Public sector",  location: "Nottingham",   status: "developing",  focus: ["public_sector","diversity"],  contact: "Jessica Robins" },
-      { name: "Anglian Water",           sector: "Utilities",      location: "Huntingdon",   status: "emerging",    focus: ["sustainability","digital"],   contact: "Jessica Robins" },
-      { name: "Norfolk & Norwich NHS",   sector: "Healthcare",     location: "Norwich",      status: "target",      focus: ["public_sector","diversity"],  contact: "Jessica Robins" },
-      { name: "Peterborough City Council",sector:"Public sector",  location: "Peterborough", status: "target",      focus: ["public_sector"],              contact: "Jessica Robins" },
+      { name: "Rolls-Royce",              sector: "Engineering",    location: "Derby",        county: "Derbyshire",      status: "established", focus: ["digital","apprenticeships"], contact: "Sarah Mitchell" },
+      { name: "University of Leicester",  sector: "Higher education",location: "Leicester",   county: "Leicestershire",  status: "established", focus: ["he","future_leaders"],       contact: "Sarah Mitchell" },
+      { name: "DHL Supply Chain",         sector: "Logistics",      location: "Derby",        county: "Derbyshire",      status: "developing",  focus: ["sme","apprenticeships"],      contact: "Sarah Mitchell" },
+      { name: "Nottingham City Council",  sector: "Public sector",  location: "Nottingham",   county: "Derbyshire",      status: "developing",  focus: ["public_sector","diversity"],  contact: "Sarah Mitchell" },
+      { name: "Anglian Water",            sector: "Utilities",      location: "Huntingdon",   county: "Cambridgeshire",  status: "emerging",    focus: ["sustainability","digital"],   contact: "Sarah Mitchell" },
+      { name: "Norfolk & Norwich NHS",    sector: "Healthcare",     location: "Norwich",      county: "Norfolk",         status: "target",      focus: ["public_sector","diversity"],  contact: "Sarah Mitchell" },
+      { name: "Peterborough City Council",sector: "Public sector",  location: "Peterborough", county: "Cambridgeshire",  status: "target",      focus: ["public_sector"],              contact: "Sarah Mitchell" },
     ],
   },
   {
@@ -79,12 +89,19 @@ const REGIONS = [
     focus_strengths: ["diversity","future_leaders","he","public_sector"],
     focus_targets: ["sme","digital"],
     top_employers: [
-      { name: "KPMG",                  sector: "Professional Services" },
-      { name: "Transport for London",  sector: "Public Sector" },
+      { name: "NHS England", sector: "Healthcare" },
+      { name: "Transport for London", sector: "Public Sector" },
+      { name: "KPMG", sector: "Professional Services" },
+      { name: "Barclays", sector: "Financial Services" },
       { name: "King's College London", sector: "Higher Education" },
-      { name: "NHS England",           sector: "Healthcare" },
-      { name: "Barclays",              sector: "Financial Services" },
     ],
+    county_employers: {
+      "Central London":  [{ name: "NHS England", sector: "Healthcare" }, { name: "Deloitte", sector: "Professional Services" }, { name: "Goldman Sachs", sector: "Financial Services" }],
+      "East London":     [{ name: "KPMG", sector: "Professional Services" }, { name: "Barclays", sector: "Financial Services" }, { name: "Canary Wharf Group", sector: "Property" }],
+      "West London":     [{ name: "Heathrow Airport", sector: "Transport" }, { name: "Sky", sector: "Media" }, { name: "GSK", sector: "Pharmaceutical" }],
+      "North London":    [{ name: "University College London", sector: "Higher Education" }, { name: "Arsenal FC", sector: "Sport & Entertainment" }, { name: "Whittington Health NHS", sector: "Healthcare" }],
+      "South London":    [{ name: "Transport for London", sector: "Public Sector" }, { name: "King's College London", sector: "Higher Education" }, { name: "Guy's & St Thomas' NHS", sector: "Healthcare" }],
+    },
     sme_context: "London hosts over 400,000 SMEs, making it the UK's largest SME ecosystem. Strong concentration in tech, creative industries, and professional services.",
     board_members: [
       { name: "Katie Sherwood CMgr MCMI", role: "Regional Chair",                      email: "london@managers.org.uk",         skills: ["Executive leadership", "Financial services strategy", "Board governance"],          sectors: ["Financial services", "Professional services", "FinTech"] },
@@ -94,14 +111,15 @@ const REGIONS = [
       { name: "Aisha Patel CMgr MCMI",    role: "Board Member — Diversity & Inclusion",email: "a.patel@placeholder.co.uk",      skills: ["Equity strategy", "Community engagement", "Organisational culture"],              sectors: ["Charity & third sector", "Retail", "Education"] },
       { name: "Chris Delaney MCMI",       role: "Board Member — Financial Services",   email: "c.delaney@placeholder.co.uk",    skills: ["Investment management", "Regulatory compliance", "Strategic planning"],            sectors: ["Asset management", "Banking", "Consulting"] },
     ],
+    cmi_contact: { name: "James Obi", title: "Partnership Manager — London", email: "j.obi@managers.org.uk" },
     employers: [
-      { name: "KPMG",                       sector: "Professional services", location: "Canary Wharf",   status: "established", focus: ["future_leaders","diversity"],  contact: "Katie Sherwood" },
-      { name: "Transport for London",       sector: "Public sector",         location: "Southwark",      status: "established", focus: ["public_sector","digital"],     contact: "Katie Sherwood" },
-      { name: "King's College London",      sector: "Higher education",      location: "London Bridge",  status: "established", focus: ["he","future_leaders"],         contact: "Katie Sherwood" },
-      { name: "NHS England",                sector: "Healthcare",            location: "City of London", status: "established", focus: ["public_sector","diversity"],   contact: "Katie Sherwood" },
-      { name: "Barclays",                   sector: "Financial services",    location: "Canary Wharf",   status: "developing",  focus: ["digital","diversity"],        contact: "Katie Sherwood" },
-      { name: "Hackney Council",            sector: "Public sector",         location: "Hackney",        status: "developing",  focus: ["public_sector","diversity"],   contact: "Katie Sherwood" },
-      { name: "Tech Nation (est. equiv.)",  sector: "Tech / Digital",        location: "Shoreditch",     status: "target",      focus: ["digital","sme"],              contact: "Katie Sherwood" },
+      { name: "KPMG",                      sector: "Professional services", location: "Canary Wharf",   county: "East London",    status: "established", focus: ["future_leaders","diversity"],  contact: "James Obi" },
+      { name: "Transport for London",      sector: "Public sector",         location: "Southwark",      county: "South London",   status: "established", focus: ["public_sector","digital"],     contact: "James Obi" },
+      { name: "King's College London",     sector: "Higher education",      location: "London Bridge",  county: "South London",   status: "established", focus: ["he","future_leaders"],         contact: "James Obi" },
+      { name: "NHS England",               sector: "Healthcare",            location: "City of London", county: "Central London", status: "established", focus: ["public_sector","diversity"],   contact: "James Obi" },
+      { name: "Barclays",                  sector: "Financial services",    location: "Canary Wharf",   county: "East London",    status: "developing",  focus: ["digital","diversity"],        contact: "James Obi" },
+      { name: "Hackney Council",           sector: "Public sector",         location: "Hackney",        county: "East London",    status: "developing",  focus: ["public_sector","diversity"],   contact: "James Obi" },
+      { name: "Tech Nation (est. equiv.)", sector: "Tech / Digital",        location: "Shoreditch",     county: "East London",    status: "target",      focus: ["digital","sme"],              contact: "James Obi" },
     ],
   },
   {
@@ -116,12 +134,23 @@ const REGIONS = [
     focus_strengths: ["apprenticeships","public_sector"],
     focus_targets: ["digital","diversity","future_leaders","sustainability"],
     top_employers: [
-      { name: "Leeds City Council",        sector: "Public Sector" },
-      { name: "Sheffield Hallam University",sector: "Higher Education" },
-      { name: "NHS Yorkshire & Humber",    sector: "Healthcare" },
-      { name: "AMRC (Boeing / Sheffield)", sector: "Manufacturing" },
-      { name: "Siemens Mobility",          sector: "Engineering" },
+      { name: "Leeds City Council", sector: "Public Sector" },
+      { name: "NHS Yorkshire & Humber", sector: "Healthcare" },
+      { name: "Sheffield Hallam University", sector: "Higher Education" },
+      { name: "Asda (HQ Leeds)", sector: "Retail" },
+      { name: "Siemens Mobility", sector: "Engineering" },
     ],
+    county_employers: {
+      "County Durham":   [{ name: "Durham County Council", sector: "Public Sector" }, { name: "Nissan (Sunderland)", sector: "Automotive" }, { name: "Durham University", sector: "Higher Education" }],
+      "Tyne & Wear":     [{ name: "Newcastle City Council", sector: "Public Sector" }, { name: "Sage Group", sector: "Technology" }, { name: "Newcastle University", sector: "Higher Education" }],
+      "Northumberland":  [{ name: "Northumberland County Council", sector: "Public Sector" }, { name: "Arch (Northumberland)", sector: "Economic Development" }, { name: "Northumbria Healthcare NHS", sector: "Healthcare" }],
+      "Teesside":        [{ name: "Teesside University", sector: "Higher Education" }, { name: "PD Ports", sector: "Logistics" }, { name: "South Tees Hospitals NHS", sector: "Healthcare" }],
+      "North Yorkshire": [{ name: "North Yorkshire County Council", sector: "Public Sector" }, { name: "Skipton Building Society", sector: "Financial Services" }, { name: "Harrogate & District NHS", sector: "Healthcare" }],
+      "West Yorkshire":  [{ name: "Leeds City Council", sector: "Public Sector" }, { name: "Asda (HQ)", sector: "Retail" }, { name: "University of Leeds", sector: "Higher Education" }],
+      "South Yorkshire": [{ name: "Sheffield Hallam University", sector: "Higher Education" }, { name: "Sheffield City Council", sector: "Public Sector" }, { name: "AMRC", sector: "Manufacturing" }],
+      "East Riding":     [{ name: "Siemens Mobility", sector: "Engineering" }, { name: "East Riding Council", sector: "Public Sector" }, { name: "Humber NHS", sector: "Healthcare" }],
+      "Humberside":      [{ name: "Associated British Ports", sector: "Logistics" }, { name: "Reckitt (Hull)", sector: "Consumer Goods" }, { name: "Hull City Council", sector: "Public Sector" }],
+    },
     sme_context: "Over 230,000 SMEs operate across the region, with a strong base in manufacturing, food production, and the growing digital and creative sectors in Leeds and Sheffield.",
     board_members: [
       { name: "Vacancy — Regional Chair", role: "Regional Chair (being recruited)",  email: "northeast@managers.org.uk",       skills: ["TBC", "TBC", "TBC"],                                                               sectors: ["TBC", "TBC", "TBC"] },
@@ -129,13 +158,14 @@ const REGIONS = [
       { name: "Gareth Rees CMgr MCMI",   role: "Board Member — Apprenticeships",    email: "g.rees@placeholder.co.uk",       skills: ["Apprenticeship delivery", "Employer partnerships", "Skills policy"],                sectors: ["Manufacturing", "Engineering", "Further education"] },
       { name: "Fatima Hussain MCMI",      role: "Board Member — Public Sector",      email: "f.hussain@placeholder.co.uk",    skills: ["Service transformation", "Community leadership", "Policy implementation"],          sectors: ["Local government", "Social housing", "Charity"] },
     ],
+    cmi_contact: { name: "Priya Kapoor", title: "Partnership Manager — North East, Yorkshire & Humberside", email: "p.kapoor@managers.org.uk" },
     employers: [
-      { name: "Leeds City Council",           sector: "Public sector",   location: "Leeds",    status: "established", focus: ["public_sector"],              contact: "Interim contact" },
-      { name: "Sheffield Hallam University",  sector: "Higher education",location: "Sheffield",status: "established", focus: ["he","future_leaders"],         contact: "Interim contact" },
-      { name: "NHS Yorkshire & Humber",       sector: "Healthcare",      location: "Leeds",    status: "developing",  focus: ["public_sector","diversity"],   contact: "Interim contact" },
-      { name: "AMRC (Boeing / Univ. Sheff.)", sector: "Manufacturing",   location: "Sheffield",status: "developing",  focus: ["digital","apprenticeships"],   contact: "Interim contact" },
-      { name: "Siemens Mobility",             sector: "Engineering",     location: "Goole",    status: "emerging",    focus: ["sustainability","digital"],    contact: "Interim contact" },
-      { name: "Skipton Building Society",     sector: "Financial services",location:"Skipton", status: "target",      focus: ["sme","diversity"],             contact: "Interim contact" },
+      { name: "Leeds City Council",          sector: "Public sector",    location: "Leeds",    county: "West Yorkshire",  status: "established", focus: ["public_sector"],              contact: "Priya Kapoor" },
+      { name: "Sheffield Hallam University", sector: "Higher education", location: "Sheffield",county: "South Yorkshire", status: "established", focus: ["he","future_leaders"],         contact: "Priya Kapoor" },
+      { name: "NHS Yorkshire & Humber",      sector: "Healthcare",       location: "Leeds",    county: "West Yorkshire",  status: "developing",  focus: ["public_sector","diversity"],   contact: "Priya Kapoor" },
+      { name: "AMRC (Boeing / Univ. Sheff.)",sector: "Manufacturing",    location: "Sheffield",county: "South Yorkshire", status: "developing",  focus: ["digital","apprenticeships"],   contact: "Priya Kapoor" },
+      { name: "Siemens Mobility",            sector: "Engineering",      location: "Goole",    county: "East Riding",     status: "emerging",    focus: ["sustainability","digital"],    contact: "Priya Kapoor" },
+      { name: "Skipton Building Society",    sector: "Financial services",location: "Skipton", county: "North Yorkshire",  status: "target",      focus: ["sme","diversity"],             contact: "Priya Kapoor" },
     ],
   },
   {
@@ -150,12 +180,21 @@ const REGIONS = [
     focus_strengths: ["public_sector","he"],
     focus_targets: ["digital","sme","diversity"],
     top_employers: [
-      { name: "Ulster University",    sector: "Higher Education" },
+      { name: "Concentrix", sector: "Business Services" },
+      { name: "Ulster University", sector: "Higher Education" },
       { name: "Belfast City Council", sector: "Public Sector" },
-      { name: "Invest NI",            sector: "Government Agency" },
-      { name: "Allstate NI",          sector: "Technology" },
-      { name: "Concentrix",           sector: "Business Services" },
+      { name: "Allstate NI", sector: "Technology" },
+      { name: "Invest NI", sector: "Government Agency" },
     ],
+    county_employers: {
+      "Belfast":       [{ name: "Concentrix", sector: "Business Services" }, { name: "Ulster University", sector: "Higher Education" }, { name: "Belfast City Council", sector: "Public Sector" }],
+      "Antrim":        [{ name: "Belfast International Airport", sector: "Transport" }, { name: "Antrim & Newtownabbey Council", sector: "Public Sector" }, { name: "Randox Laboratories", sector: "Life Sciences" }],
+      "Armagh":        [{ name: "Armagh City Council", sector: "Public Sector" }, { name: "Moy Park", sector: "Food & Drink" }, { name: "Southern Health & Social Care", sector: "Healthcare" }],
+      "Down":          [{ name: "Norbrook Laboratories", sector: "Pharmaceutical" }, { name: "Newry City Council", sector: "Public Sector" }, { name: "Southern Regional College", sector: "Education" }],
+      "Fermanagh":     [{ name: "Fermanagh & Omagh Council", sector: "Public Sector" }, { name: "Lakeland Dairies", sector: "Food & Drink" }, { name: "South West Acute Hospital", sector: "Healthcare" }],
+      "Londonderry":   [{ name: "Derry City Council", sector: "Public Sector" }, { name: "Allstate NI", sector: "Technology" }, { name: "Altnagelvin Hospital", sector: "Healthcare" }],
+      "Tyrone":        [{ name: "Mid Ulster Council", sector: "Public Sector" }, { name: "Tyrone Produce", sector: "Food & Drink" }, { name: "Western Health & Social Care", sector: "Healthcare" }],
+    },
     sme_context: "Northern Ireland has approximately 75,000 SMEs, with growing clusters in fintech, cybersecurity, and agri-food, supported by Invest NI and cross-border all-island economic activity.",
     board_members: [
       { name: "Dr Claire Dickson CMgr FCMI", role: "Regional Chair",               email: "northernireland@managers.org.uk", skills: ["Academic leadership", "Research & innovation", "Cross-border collaboration"],       sectors: ["Higher education", "Research", "Public sector"] },
@@ -163,11 +202,12 @@ const REGIONS = [
       { name: "Siobhan Doherty CMgr MCMI",   role: "Board Member — Public Sector", email: "s.doherty@placeholder.co.uk",    skills: ["Policy development", "Public administration", "Service reform"],                   sectors: ["Civil service", "Local government", "Healthcare"] },
       { name: "Patrick Lavery MCMI",         role: "Board Member — SME & Digital", email: "p.lavery@placeholder.co.uk",     skills: ["Digital strategy", "Entrepreneurship", "Product development"],                     sectors: ["Technology", "Cybersecurity", "Start-ups"] },
     ],
+    cmi_contact: { name: "Aoife Brennan", title: "Partnership Manager — Northern Ireland", email: "a.brennan@managers.org.uk" },
     employers: [
-      { name: "Ulster University",    sector: "Higher education",  location: "Belfast", status: "established", focus: ["he","future_leaders"],  contact: "Dr Claire Dickson" },
-      { name: "Belfast City Council", sector: "Public sector",     location: "Belfast", status: "developing",  focus: ["public_sector"],        contact: "Dr Claire Dickson" },
-      { name: "Invest NI",            sector: "Government agency", location: "Belfast", status: "developing",  focus: ["sme","digital"],        contact: "Dr Claire Dickson" },
-      { name: "Allstate NI",          sector: "Technology",        location: "Belfast", status: "target",      focus: ["digital","diversity"],  contact: "Dr Claire Dickson" },
+      { name: "Ulster University",    sector: "Higher education",  location: "Belfast", county: "Belfast", status: "established", focus: ["he","future_leaders"],  contact: "Aoife Brennan" },
+      { name: "Belfast City Council", sector: "Public sector",     location: "Belfast", county: "Belfast", status: "developing",  focus: ["public_sector"],        contact: "Aoife Brennan" },
+      { name: "Invest NI",            sector: "Government agency", location: "Belfast", county: "Belfast", status: "developing",  focus: ["sme","digital"],        contact: "Aoife Brennan" },
+      { name: "Allstate NI",          sector: "Technology",        location: "Belfast", county: "Belfast", status: "target",      focus: ["digital","diversity"],  contact: "Aoife Brennan" },
     ],
   },
   {
@@ -182,12 +222,21 @@ const REGIONS = [
     focus_strengths: ["public_sector","he","sustainability","diversity"],
     focus_targets: ["digital","future_leaders"],
     top_employers: [
-      { name: "Scottish Government",     sector: "Public Sector" },
+      { name: "NHS Scotland", sector: "Healthcare" },
+      { name: "Scottish Government", sector: "Public Sector" },
       { name: "University of Edinburgh", sector: "Higher Education" },
-      { name: "BP (North Sea)",          sector: "Energy" },
-      { name: "Royal Bank of Scotland",  sector: "Financial Services" },
-      { name: "NHS Scotland",            sector: "Healthcare" },
+      { name: "Royal Bank of Scotland", sector: "Financial Services" },
+      { name: "BP (North Sea)", sector: "Energy" },
     ],
+    county_employers: {
+      "Edinburgh":           [{ name: "Scottish Government", sector: "Public Sector" }, { name: "Royal Bank of Scotland", sector: "Financial Services" }, { name: "University of Edinburgh", sector: "Higher Education" }],
+      "Glasgow":             [{ name: "NHS Greater Glasgow & Clyde", sector: "Healthcare" }, { name: "University of Glasgow", sector: "Higher Education" }, { name: "Glasgow City Council", sector: "Public Sector" }],
+      "Aberdeen":            [{ name: "BP (North Sea)", sector: "Energy" }, { name: "Aberdeen City Council", sector: "Public Sector" }, { name: "University of Aberdeen", sector: "Higher Education" }],
+      "Dundee":              [{ name: "NHS Tayside", sector: "Healthcare" }, { name: "University of Dundee", sector: "Higher Education" }, { name: "Dundee City Council", sector: "Public Sector" }],
+      "Highlands & Islands": [{ name: "Highlands & Islands Enterprise", sector: "Economic Development" }, { name: "NHS Highland", sector: "Healthcare" }, { name: "University of the Highlands & Islands", sector: "Higher Education" }],
+      "Fife":                [{ name: "Fife Council", sector: "Public Sector" }, { name: "University of St Andrews", sector: "Higher Education" }, { name: "NHS Fife", sector: "Healthcare" }],
+      "Stirling":            [{ name: "University of Stirling", sector: "Higher Education" }, { name: "Stirling Council", sector: "Public Sector" }, { name: "Forth Valley Royal Hospital", sector: "Healthcare" }],
+    },
     sme_context: "Scotland has around 340,000 SMEs, with notable strength in food & drink, renewables, tourism, and the growing tech corridor between Edinburgh and Glasgow.",
     board_members: [
       { name: "Lesley Mitchell CMgr CCMI",  role: "Regional Chair",                        email: "scotland@managers.org.uk",       skills: ["Executive leadership", "Devolved policy", "Strategic partnerships"],              sectors: ["Financial services", "Public sector", "Professional services"] },
@@ -197,13 +246,14 @@ const REGIONS = [
       { name: "Fiona Drummond CMgr MCMI",   role: "Board Member — Public Sector",          email: "f.drummond@placeholder.co.uk",   skills: ["Public service reform", "Performance management", "People strategy"],            sectors: ["Scottish Government", "NHS Scotland", "Local authorities"] },
       { name: "Tariq Bashir MCMI",           role: "Board Member — Diversity & Inclusion",  email: "t.bashir@placeholder.co.uk",     skills: ["Cultural intelligence", "Anti-racism strategy", "Community development"],       sectors: ["Housing", "Social enterprise", "Education"] },
     ],
+    cmi_contact: { name: "Fiona Campbell", title: "Partnership Manager — Scotland", email: "f.campbell@managers.org.uk" },
     employers: [
-      { name: "Scottish Government",          sector: "Public sector",     location: "Edinburgh", status: "established", focus: ["public_sector","diversity"],  contact: "Lesley Mitchell" },
-      { name: "University of Edinburgh",      sector: "Higher education",  location: "Edinburgh", status: "established", focus: ["he","future_leaders"],         contact: "Lesley Mitchell" },
-      { name: "BP (North Sea Transition)",    sector: "Energy",            location: "Aberdeen",  status: "established", focus: ["sustainability","digital"],    contact: "Lesley Mitchell" },
-      { name: "Royal Bank of Scotland",       sector: "Financial services",location: "Edinburgh", status: "developing",  focus: ["digital","diversity"],        contact: "Lesley Mitchell" },
-      { name: "NHS Scotland",                 sector: "Healthcare",        location: "Glasgow",   status: "developing",  focus: ["public_sector"],              contact: "Lesley Mitchell" },
-      { name: "Highlands & Islands Enterprise",sector:"Government agency", location: "Inverness", status: "emerging",    focus: ["sme","sustainability"],       contact: "Lesley Mitchell" },
+      { name: "Scottish Government",           sector: "Public sector",      location: "Edinburgh", county: "Edinburgh",           status: "established", focus: ["public_sector","diversity"],  contact: "Fiona Campbell" },
+      { name: "University of Edinburgh",       sector: "Higher education",   location: "Edinburgh", county: "Edinburgh",           status: "established", focus: ["he","future_leaders"],         contact: "Fiona Campbell" },
+      { name: "BP (North Sea Transition)",     sector: "Energy",             location: "Aberdeen",  county: "Aberdeen",            status: "established", focus: ["sustainability","digital"],    contact: "Fiona Campbell" },
+      { name: "Royal Bank of Scotland",        sector: "Financial services", location: "Edinburgh", county: "Edinburgh",           status: "developing",  focus: ["digital","diversity"],        contact: "Fiona Campbell" },
+      { name: "NHS Scotland",                  sector: "Healthcare",         location: "Glasgow",   county: "Glasgow",             status: "developing",  focus: ["public_sector"],              contact: "Fiona Campbell" },
+      { name: "Highlands & Islands Enterprise",sector: "Government agency",  location: "Inverness", county: "Highlands & Islands", status: "emerging",    focus: ["sme","sustainability"],       contact: "Fiona Campbell" },
     ],
   },
   {
@@ -218,12 +268,22 @@ const REGIONS = [
     focus_strengths: ["sme","future_leaders"],
     focus_targets: ["public_sector","sustainability","diversity"],
     top_employers: [
-      { name: "BAE Systems",             sector: "Defence & Aerospace" },
-      { name: "University of Southampton",sector: "Higher Education" },
-      { name: "Surrey County Council",   sector: "Public Sector" },
-      { name: "Pfizer",                  sector: "Pharmaceutical" },
-      { name: "DP World",                sector: "Logistics" },
+      { name: "BAE Systems", sector: "Defence & Aerospace" },
+      { name: "University of Southampton", sector: "Higher Education" },
+      { name: "Surrey County Council", sector: "Public Sector" },
+      { name: "Pfizer", sector: "Pharmaceutical" },
+      { name: "DP World", sector: "Logistics" },
     ],
+    county_employers: {
+      "Kent":             [{ name: "Pfizer (Sandwich)", sector: "Pharmaceutical" }, { name: "Kent County Council", sector: "Public Sector" }, { name: "Discovery Park", sector: "Life Sciences" }],
+      "Surrey":           [{ name: "Surrey County Council", sector: "Public Sector" }, { name: "Royal Surrey NHS", sector: "Healthcare" }, { name: "University of Surrey", sector: "Higher Education" }],
+      "Sussex (East & West)": [{ name: "University of Brighton", sector: "Higher Education" }, { name: "East Sussex County Council", sector: "Public Sector" }, { name: "Thales (Crawley)", sector: "Defence" }],
+      "Hampshire":        [{ name: "BAE Systems", sector: "Defence & Aerospace" }, { name: "University of Southampton", sector: "Higher Education" }, { name: "Hampshire County Council", sector: "Public Sector" }],
+      "Berkshire":        [{ name: "Virgin Media O2", sector: "Technology" }, { name: "Royal Berkshire NHS", sector: "Healthcare" }, { name: "Vodafone", sector: "Telecommunications" }],
+      "Oxfordshire":      [{ name: "University of Oxford", sector: "Higher Education" }, { name: "Oxford University Hospitals", sector: "Healthcare" }, { name: "Oxfordshire County Council", sector: "Public Sector" }],
+      "Buckinghamshire":  [{ name: "Buckinghamshire Council", sector: "Public Sector" }, { name: "Wycombe District Council", sector: "Public Sector" }, { name: "Stoke Mandeville Hospital", sector: "Healthcare" }],
+      "Essex":            [{ name: "DP World (London Gateway)", sector: "Logistics" }, { name: "Essex County Council", sector: "Public Sector" }, { name: "Anglia Ruskin University", sector: "Higher Education" }],
+    },
     sme_context: "The South East has one of the UK's highest concentrations of SMEs — over 420,000 — driven by strong professional services, technology, and life sciences clusters.",
     board_members: [
       { name: "Sarah Furness CMgr FCMI",   role: "Regional Chair",                        email: "southeast@managers.org.uk",      skills: ["Strategic leadership", "Business growth", "Networking & partnerships"],           sectors: ["Aerospace & defence", "Professional services", "Technology"] },
@@ -232,13 +292,14 @@ const REGIONS = [
       { name: "Oliver Watts MCMI",          role: "Board Member — Future Leaders",         email: "o.watts@placeholder.co.uk",      skills: ["Graduate development", "Coaching", "Leadership assessment"],                     sectors: ["Financial services", "Retail", "FMCG"] },
       { name: "Deborah Simmons CMgr MCMI", role: "Board Member — Defence & Aerospace",    email: "d.simmons@placeholder.co.uk",    skills: ["Programme management", "Defence procurement", "STEM engagement"],               sectors: ["Defence", "Aerospace", "Engineering"] },
     ],
+    cmi_contact: { name: "Tom Hadley", title: "Partnership Manager — South East", email: "t.hadley@managers.org.uk" },
     employers: [
-      { name: "BAE Systems",              sector: "Defence & Aerospace", location: "Farnborough",     status: "established", focus: ["digital","apprenticeships"],  contact: "Sarah Furness" },
-      { name: "University of Southampton",sector: "Higher education",    location: "Southampton",     status: "established", focus: ["he","sustainability"],        contact: "Sarah Furness" },
-      { name: "Surrey County Council",    sector: "Public sector",       location: "Guildford",       status: "developing",  focus: ["public_sector"],             contact: "Sarah Furness" },
-      { name: "Pfizer",                   sector: "Pharmaceutical",      location: "Sandwich",        status: "developing",  focus: ["digital","diversity"],       contact: "Sarah Furness" },
-      { name: "DP World (London Gateway)",sector: "Logistics",           location: "Stanford-le-Hope",status: "emerging",    focus: ["sme","sustainability"],      contact: "Sarah Furness" },
-      { name: "Virgin Media O2",          sector: "Technology",          location: "Slough",          status: "target",      focus: ["digital","future_leaders"],  contact: "Sarah Furness" },
+      { name: "BAE Systems",               sector: "Defence & Aerospace", location: "Farnborough",      county: "Hampshire",    status: "established", focus: ["digital","apprenticeships"],  contact: "Tom Hadley" },
+      { name: "University of Southampton", sector: "Higher education",    location: "Southampton",      county: "Hampshire",    status: "established", focus: ["he","sustainability"],        contact: "Tom Hadley" },
+      { name: "Surrey County Council",     sector: "Public sector",       location: "Guildford",        county: "Surrey",       status: "developing",  focus: ["public_sector"],             contact: "Tom Hadley" },
+      { name: "Pfizer",                    sector: "Pharmaceutical",      location: "Sandwich",         county: "Kent",         status: "developing",  focus: ["digital","diversity"],       contact: "Tom Hadley" },
+      { name: "DP World (London Gateway)", sector: "Logistics",           location: "Stanford-le-Hope", county: "Essex",        status: "emerging",    focus: ["sme","sustainability"],      contact: "Tom Hadley" },
+      { name: "Virgin Media O2",           sector: "Technology",          location: "Slough",           county: "Berkshire",    status: "target",      focus: ["digital","future_leaders"],  contact: "Tom Hadley" },
     ],
   },
   {
@@ -253,12 +314,21 @@ const REGIONS = [
     focus_strengths: ["sme","sustainability","he"],
     focus_targets: ["diversity","digital","public_sector"],
     top_employers: [
-      { name: "Airbus UK",            sector: "Aerospace" },
-      { name: "University of Bristol",sector: "Higher Education" },
-      { name: "Lloyds Bank",          sector: "Financial Services" },
+      { name: "Airbus UK", sector: "Aerospace" },
+      { name: "University of Bristol", sector: "Higher Education" },
       { name: "EDF Energy (Hinkley)", sector: "Energy" },
-      { name: "Cornwall Council",     sector: "Public Sector" },
+      { name: "Lloyds Bank", sector: "Financial Services" },
+      { name: "Cornwall Council", sector: "Public Sector" },
     ],
+    county_employers: {
+      "Bristol":          [{ name: "Airbus UK", sector: "Aerospace" }, { name: "University of Bristol", sector: "Higher Education" }, { name: "Lloyds Bank", sector: "Financial Services" }],
+      "Somerset":         [{ name: "EDF Energy (Hinkley)", sector: "Energy" }, { name: "Somerset County Council", sector: "Public Sector" }, { name: "Musgrove Park Hospital", sector: "Healthcare" }],
+      "Devon":            [{ name: "Devon County Council", sector: "Public Sector" }, { name: "University of Exeter", sector: "Higher Education" }, { name: "Royal Devon & Exeter NHS", sector: "Healthcare" }],
+      "Cornwall":         [{ name: "Cornwall Council", sector: "Public Sector" }, { name: "Royal Cornwall Hospitals NHS", sector: "Healthcare" }, { name: "Ginsters", sector: "Food & Drink" }],
+      "Dorset":           [{ name: "Dorset Council", sector: "Public Sector" }, { name: "Bournemouth University", sector: "Higher Education" }, { name: "Dorset County Hospital", sector: "Healthcare" }],
+      "Wiltshire":        [{ name: "Wiltshire Council", sector: "Public Sector" }, { name: "MoD (Corsham)", sector: "Defence" }, { name: "Great Western Hospital", sector: "Healthcare" }],
+      "Gloucestershire":  [{ name: "Renishaw", sector: "Manufacturing" }, { name: "Gloucestershire County Council", sector: "Public Sector" }, { name: "Gloucestershire Hospitals NHS", sector: "Healthcare" }],
+    },
     sme_context: "Around 245,000 SMEs call the South West home, with particular strength in agri-food, tourism, marine industries, and a rapidly growing green energy and tech sector centred on Bristol.",
     board_members: [
       { name: "Martin Perry CMgr FCMI", role: "Regional Chair",                       email: "southwest@managers.org.uk",      skills: ["Regional economic strategy", "Infrastructure leadership", "Business advocacy"],    sectors: ["Aerospace", "Ports & logistics", "Property"] },
@@ -267,13 +337,14 @@ const REGIONS = [
       { name: "Yemi Adeyemi MCMI",      role: "Board Member — HE & Skills",           email: "y.adeyemi@placeholder.co.uk",    skills: ["Curriculum strategy", "Student outcomes", "Widening participation"],              sectors: ["Higher education", "Further education", "Skills"] },
       { name: "Karen Pascoe MCMI",      role: "Board Member — SME & Rural Enterprise",email: "k.pascoe@placeholder.co.uk",    skills: ["Rural business development", "Agri-food sector", "Community enterprise"],         sectors: ["Agriculture", "Food & drink", "Tourism"] },
     ],
+    cmi_contact: { name: "Rachel Tanner", title: "Partnership Manager — South West", email: "r.tanner@managers.org.uk" },
     employers: [
-      { name: "Airbus UK",              sector: "Aerospace",          location: "Filton",           status: "established", focus: ["digital","apprenticeships"],  contact: "Martin Perry" },
-      { name: "University of Bristol",  sector: "Higher education",   location: "Bristol",          status: "established", focus: ["he","future_leaders"],        contact: "Martin Perry" },
-      { name: "Lloyds Bank (Bristol)",  sector: "Financial services", location: "Bristol",          status: "developing",  focus: ["diversity","digital"],        contact: "Martin Perry" },
-      { name: "EDF Energy (Hinkley)",   sector: "Energy",             location: "Bridgwater",       status: "developing",  focus: ["sustainability"],             contact: "Martin Perry" },
-      { name: "Cornwall Council",       sector: "Public sector",      location: "Truro",            status: "emerging",    focus: ["public_sector","sme"],        contact: "Martin Perry" },
-      { name: "Renishaw",               sector: "Manufacturing",      location: "Wotton-under-Edge",status: "target",      focus: ["digital","apprenticeships"],  contact: "Martin Perry" },
+      { name: "Airbus UK",             sector: "Aerospace",          location: "Filton",            county: "Bristol",          status: "established", focus: ["digital","apprenticeships"],  contact: "Rachel Tanner" },
+      { name: "University of Bristol", sector: "Higher education",   location: "Bristol",           county: "Bristol",          status: "established", focus: ["he","future_leaders"],        contact: "Rachel Tanner" },
+      { name: "Lloyds Bank (Bristol)", sector: "Financial services", location: "Bristol",           county: "Bristol",          status: "developing",  focus: ["diversity","digital"],        contact: "Rachel Tanner" },
+      { name: "EDF Energy (Hinkley)",  sector: "Energy",             location: "Bridgwater",        county: "Somerset",         status: "developing",  focus: ["sustainability"],             contact: "Rachel Tanner" },
+      { name: "Cornwall Council",      sector: "Public sector",      location: "Truro",             county: "Cornwall",         status: "emerging",    focus: ["public_sector","sme"],        contact: "Rachel Tanner" },
+      { name: "Renishaw",              sector: "Manufacturing",      location: "Wotton-under-Edge", county: "Gloucestershire",  status: "target",      focus: ["digital","apprenticeships"],  contact: "Rachel Tanner" },
     ],
   },
   {
@@ -288,12 +359,21 @@ const REGIONS = [
     focus_strengths: ["public_sector","he"],
     focus_targets: ["digital","diversity","sme","future_leaders"],
     top_employers: [
-      { name: "Welsh Government",  sector: "Public Sector" },
-      { name: "Cardiff University",sector: "Higher Education" },
-      { name: "DVLA",              sector: "Public Sector" },
-      { name: "Admiral Group",     sector: "Financial Services" },
-      { name: "Arup",              sector: "Professional Services" },
+      { name: "Welsh Government", sector: "Public Sector" },
+      { name: "Cardiff University", sector: "Higher Education" },
+      { name: "Aneurin Bevan University Health Board", sector: "Healthcare" },
+      { name: "Admiral Group", sector: "Financial Services" },
+      { name: "DVLA", sector: "Public Sector" },
     ],
+    county_employers: {
+      "Cardiff":            [{ name: "Welsh Government", sector: "Public Sector" }, { name: "Cardiff University", sector: "Higher Education" }, { name: "Admiral Group", sector: "Financial Services" }],
+      "Swansea":            [{ name: "DVLA", sector: "Public Sector" }, { name: "Swansea University", sector: "Higher Education" }, { name: "Swansea Bay Health Board", sector: "Healthcare" }],
+      "Newport":            [{ name: "Aneurin Bevan University Health Board", sector: "Healthcare" }, { name: "Newport City Council", sector: "Public Sector" }, { name: "Panasonic (Newport)", sector: "Manufacturing" }],
+      "Wrexham":            [{ name: "Wrexham County Borough Council", sector: "Public Sector" }, { name: "Betsi Cadwaladr Health Board", sector: "Healthcare" }, { name: "Kronospan", sector: "Manufacturing" }],
+      "Rhondda Cynon Taf":  [{ name: "Rhondda Cynon Taf Council", sector: "Public Sector" }, { name: "Cwm Taf Morgannwg Health Board", sector: "Healthcare" }, { name: "University of South Wales", sector: "Higher Education" }],
+      "Gwynedd":            [{ name: "Gwynedd Council", sector: "Public Sector" }, { name: "Bangor University", sector: "Higher Education" }, { name: "Betsi Cadwaladr Health Board", sector: "Healthcare" }],
+      "Pembrokeshire":      [{ name: "Pembrokeshire County Council", sector: "Public Sector" }, { name: "Valero Energy (Pembroke)", sector: "Energy" }, { name: "Hywel Dda Health Board", sector: "Healthcare" }],
+    },
     sme_context: "Wales has approximately 140,000 SMEs, with clusters in agri-food, advanced manufacturing, and a growing tech scene in Cardiff. Welsh Government support programmes play a significant enabling role.",
     board_members: [
       { name: "Bethan Owen CMgr MCMI", role: "Regional Chair",                          email: "wales@managers.org.uk",          skills: ["Bilingual leadership", "Welsh public policy", "Stakeholder engagement"],           sectors: ["Public sector", "Welsh Government", "Professional services"] },
@@ -302,12 +382,13 @@ const REGIONS = [
       { name: "Ceri Thomas MCMI",      role: "Board Member — HE & Welsh Language",      email: "c.thomas@placeholder.co.uk",     skills: ["Welsh medium education", "Academic leadership", "Cultural engagement"],          sectors: ["Higher education", "Further education", "Arts & culture"] },
       { name: "Imogen Davies MCMI",    role: "Board Member — Digital & Future Leaders", email: "i.davies@placeholder.co.uk",     skills: ["Digital product management", "Youth leadership", "Agile delivery"],              sectors: ["Technology", "Start-ups", "Media"] },
     ],
+    cmi_contact: { name: "Gareth Hughes", title: "Partnership Manager — Wales", email: "g.hughes@managers.org.uk" },
     employers: [
-      { name: "Welsh Government",  sector: "Public sector",       location: "Cardiff", status: "established", focus: ["public_sector","diversity"],  contact: "Bethan Owen" },
-      { name: "Cardiff University",sector: "Higher education",    location: "Cardiff", status: "established", focus: ["he","future_leaders"],        contact: "Bethan Owen" },
-      { name: "DVLA",              sector: "Public sector",       location: "Swansea", status: "developing",  focus: ["public_sector","digital"],    contact: "Bethan Owen" },
-      { name: "Admiral Group",     sector: "Financial services",  location: "Cardiff", status: "emerging",    focus: ["digital","diversity"],        contact: "Bethan Owen" },
-      { name: "Arup",              sector: "Professional services",location: "Cardiff", status: "target",     focus: ["sustainability","digital"],   contact: "Bethan Owen" },
+      { name: "Welsh Government",  sector: "Public sector",        location: "Cardiff", county: "Cardiff",        status: "established", focus: ["public_sector","diversity"],  contact: "Gareth Hughes" },
+      { name: "Cardiff University",sector: "Higher education",     location: "Cardiff", county: "Cardiff",        status: "established", focus: ["he","future_leaders"],        contact: "Gareth Hughes" },
+      { name: "DVLA",              sector: "Public sector",        location: "Swansea", county: "Swansea",        status: "developing",  focus: ["public_sector","digital"],    contact: "Gareth Hughes" },
+      { name: "Admiral Group",     sector: "Financial services",   location: "Cardiff", county: "Cardiff",        status: "emerging",    focus: ["digital","diversity"],        contact: "Gareth Hughes" },
+      { name: "Arup",              sector: "Professional services", location: "Cardiff", county: "Cardiff",       status: "target",      focus: ["sustainability","digital"],   contact: "Gareth Hughes" },
     ],
   },
   {
@@ -322,12 +403,23 @@ const REGIONS = [
     focus_strengths: ["diversity","apprenticeships","future_leaders","digital"],
     focus_targets: ["sustainability","sme"],
     top_employers: [
-      { name: "Jaguar Land Rover",     sector: "Automotive" },
-      { name: "Manchester City Council",sector: "Public Sector" },
-      { name: "BBC (Media City)",       sector: "Media" },
-      { name: "Aston University",       sector: "Higher Education" },
-      { name: "Co-op Group",            sector: "Retail" },
+      { name: "Jaguar Land Rover", sector: "Automotive" },
+      { name: "Manchester University NHS", sector: "Healthcare" },
+      { name: "BBC (Media City)", sector: "Media" },
+      { name: "Aston University", sector: "Higher Education" },
+      { name: "Manchester City Council", sector: "Public Sector" },
     ],
+    county_employers: {
+      "Birmingham":    [{ name: "Birmingham City Council", sector: "Public Sector" }, { name: "University Hospitals Birmingham", sector: "Healthcare" }, { name: "Aston University", sector: "Higher Education" }],
+      "Coventry":      [{ name: "Jaguar Land Rover", sector: "Automotive" }, { name: "Coventry City Council", sector: "Public Sector" }, { name: "University of Warwick", sector: "Higher Education" }],
+      "Wolverhampton": [{ name: "City of Wolverhampton Council", sector: "Public Sector" }, { name: "University of Wolverhampton", sector: "Higher Education" }, { name: "Royal Wolverhampton NHS", sector: "Healthcare" }],
+      "Manchester":    [{ name: "Manchester City Council", sector: "Public Sector" }, { name: "Manchester University NHS", sector: "Healthcare" }, { name: "BBC (Media City)", sector: "Media" }],
+      "Liverpool":     [{ name: "Liverpool City Council", sector: "Public Sector" }, { name: "Liverpool University Hospitals", sector: "Healthcare" }, { name: "University of Liverpool", sector: "Higher Education" }],
+      "Cheshire":      [{ name: "AstraZeneca (Macclesfield)", sector: "Pharmaceutical" }, { name: "Cheshire West Council", sector: "Public Sector" }, { name: "Leighton Hospital", sector: "Healthcare" }],
+      "Lancashire":    [{ name: "BAE Systems (Warton)", sector: "Defence" }, { name: "Lancashire County Council", sector: "Public Sector" }, { name: "University of Central Lancashire", sector: "Higher Education" }],
+      "Staffordshire": [{ name: "Keele University", sector: "Higher Education" }, { name: "Staffordshire County Council", sector: "Public Sector" }, { name: "University Hospitals North Midlands", sector: "Healthcare" }],
+      "Shropshire":    [{ name: "Shropshire Council", sector: "Public Sector" }, { name: "Shrewsbury & Telford Hospital NHS", sector: "Healthcare" }, { name: "Harper Adams University", sector: "Higher Education" }],
+    },
     sme_context: "The combined region is home to over 380,000 SMEs — one of the UK's largest — spanning advanced manufacturing, logistics, the visitor economy, and a rapidly expanding fintech sector in Manchester.",
     board_members: [
       { name: "Elizabeth Oni-Iyiola CMgr CCMI", role: "Regional Chair",                           email: "westmidlands@managers.org.uk",   skills: ["Inclusive leadership", "Board-level strategy", "Organisational transformation"],   sectors: ["Financial services", "Professional services", "Education"] },
@@ -338,15 +430,16 @@ const REGIONS = [
       { name: "David Lowe MCMI",                 role: "Board Member — Digital Leadership",        email: "d.lowe@placeholder.co.uk",       skills: ["Digital transformation", "Data strategy", "Cyber resilience"],                   sectors: ["Technology", "Financial services", "Public sector"] },
       { name: "Janet Corbett CMgr MCMI",         role: "Board Member — Manufacturing & Automotive",email: "j.corbett@placeholder.co.uk",   skills: ["Lean manufacturing", "Quality management", "International supply chains"],       sectors: ["Automotive", "Aerospace", "Industrial engineering"] },
     ],
+    cmi_contact: { name: "Diane Fletcher", title: "Partnership Manager — West Midlands & North West", email: "d.fletcher@managers.org.uk" },
     employers: [
-      { name: "Jaguar Land Rover",                 sector: "Automotive",      location: "Coventry",    status: "established", focus: ["digital","apprenticeships"],   contact: "Elizabeth Oni-Iyiola" },
-      { name: "Manchester City Council",           sector: "Public sector",   location: "Manchester",  status: "established", focus: ["public_sector","diversity"],   contact: "Elizabeth Oni-Iyiola" },
-      { name: "BBC (Media City)",                  sector: "Media",           location: "Salford",     status: "established", focus: ["diversity","future_leaders"],  contact: "Elizabeth Oni-Iyiola" },
-      { name: "Aston University",                  sector: "Higher education",location: "Birmingham",  status: "established", focus: ["he","diversity"],             contact: "Elizabeth Oni-Iyiola" },
-      { name: "Co-op Group",                       sector: "Retail",          location: "Manchester",  status: "developing",  focus: ["sme","sustainability"],       contact: "Elizabeth Oni-Iyiola" },
-      { name: "Keele University",                  sector: "Higher education",location: "Staffordshire",status:"developing",  focus: ["he","sustainability"],        contact: "Elizabeth Oni-Iyiola" },
-      { name: "Liverpool City Region CA",          sector: "Public sector",   location: "Liverpool",   status: "developing",  focus: ["public_sector","digital"],    contact: "Elizabeth Oni-Iyiola" },
-      { name: "AstraZeneca (Macclesfield)",        sector: "Pharmaceutical",  location: "Macclesfield",status: "target",      focus: ["sustainability","digital"],   contact: "Elizabeth Oni-Iyiola" },
+      { name: "Jaguar Land Rover",          sector: "Automotive",       location: "Coventry",     county: "Coventry",      status: "established", focus: ["digital","apprenticeships"],   contact: "Diane Fletcher" },
+      { name: "Manchester City Council",    sector: "Public sector",    location: "Manchester",   county: "Manchester",    status: "established", focus: ["public_sector","diversity"],   contact: "Diane Fletcher" },
+      { name: "BBC (Media City)",           sector: "Media",            location: "Salford",      county: "Manchester",    status: "established", focus: ["diversity","future_leaders"],  contact: "Diane Fletcher" },
+      { name: "Aston University",           sector: "Higher education", location: "Birmingham",   county: "Birmingham",    status: "established", focus: ["he","diversity"],              contact: "Diane Fletcher" },
+      { name: "Co-op Group",               sector: "Retail",            location: "Manchester",   county: "Manchester",    status: "developing",  focus: ["sme","sustainability"],        contact: "Diane Fletcher" },
+      { name: "Keele University",           sector: "Higher education", location: "Staffordshire",county: "Staffordshire", status: "developing",  focus: ["he","sustainability"],         contact: "Diane Fletcher" },
+      { name: "Liverpool City Region CA",   sector: "Public sector",    location: "Liverpool",    county: "Liverpool",     status: "developing",  focus: ["public_sector","digital"],     contact: "Diane Fletcher" },
+      { name: "AstraZeneca (Macclesfield)", sector: "Pharmaceutical",   location: "Macclesfield", county: "Cheshire",      status: "target",      focus: ["sustainability","digital"],    contact: "Diane Fletcher" },
     ],
   },
 ];
@@ -493,14 +586,13 @@ function RegionCard({ region, onClick, activeFocusFilters, statusFilter }) {
     >
       <div style={{ position: "absolute", top: 0, left: 0, width: 5, bottom: 0, background: s.color, borderRadius: "12px 0 0 12px" }} />
       <div style={{ paddingLeft: 10 }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 8, marginBottom: 6 }}>
+        <div style={{ marginBottom: 6 }}>
           <p style={{ fontWeight: 600, fontSize: 14, margin: 0, color: "#1a1a1a" }}>{region.name}</p>
-          <StatusBadge status={region.overall_status} small />
         </div>
         <p style={{ fontSize: 12, color: "#666", margin: "0 0 10px", lineHeight: 1.5 }}>
           {region.counties.slice(0, 3).join(", ")}{region.counties.length > 3 ? ` +${region.counties.length - 3} more` : ""}
         </p>
-        <div style={{ display: "flex", gap: 5, flexWrap: "wrap", marginBottom: 10 }}>
+        <div style={{ display: "flex", gap: 5, flexWrap: "wrap", marginBottom: 12 }}>
           {region.focus_strengths.map(f => {
             const fa = FOCUS_AREAS.find(x => x.id === f);
             return fa ? (
@@ -510,15 +602,20 @@ function RegionCard({ region, onClick, activeFocusFilters, statusFilter }) {
             ) : null;
           })}
         </div>
-        <div style={{ display: "flex", gap: 10, borderTop: "1px solid #f0f0ee", paddingTop: 8 }}>
-          {Object.entries({ established: 0, developing: 0, emerging: 0, target: 0 }).map(([k]) => {
-            const count = region.employers.filter(e => e.status === k).length;
-            return count > 0 ? (
-              <span key={k} style={{ fontSize: 11, color: ESTABLISHMENT_LEVELS[k].color, fontWeight: 600 }}>
-                {count} {ESTABLISHMENT_LEVELS[k].label.split(" ")[0].toLowerCase()}
-              </span>
-            ) : null;
-          })}
+        <div style={{ borderTop: "1px solid #f0f0ee", paddingTop: 8 }}>
+          <p style={{ margin: "0 0 7px", fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#999" }}>Current partnerships</p>
+          <div style={{ display: "flex", gap: 0 }}>
+            {Object.entries({ established: 0, developing: 0, emerging: 0, target: 0 }).map(([k]) => {
+              const count = region.employers.filter(e => e.status === k).length;
+              const meta = ESTABLISHMENT_LEVELS[k];
+              return (
+                <div key={k} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
+                  <span style={{ fontSize: 18, fontWeight: 700, color: meta.color, lineHeight: 1 }}>{count}</span>
+                  <span style={{ fontSize: 10, color: meta.color, fontWeight: 600, textAlign: "center", lineHeight: 1.2 }}>{meta.label.split(" ")[0]}</span>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
@@ -564,6 +661,7 @@ function EmployerRow({ emp, activeFocusFilters }) {
 
 function RegionDetail({ region, onBack, activeFocusFilters, setActiveFocusFilters }) {
   const [activeTab, setActiveTab] = useState("overview");
+  const [selectedCounty, setSelectedCounty] = useState(null);
   const s = ESTABLISHMENT_LEVELS[region.overall_status];
 
   const filteredEmployers = region.employers.filter(e =>
@@ -600,9 +698,8 @@ function RegionDetail({ region, onBack, activeFocusFilters, setActiveFocusFilter
 
       {/* Header card */}
       <div style={{ background: "#fff", borderRadius: 12, padding: "1.25rem 1.5rem", marginBottom: 16, boxShadow: "0 1px 4px rgba(0,0,0,0.06)", borderLeft: `5px solid ${s.color}` }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, marginBottom: 6 }}>
+        <div style={{ marginBottom: 6 }}>
           <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700, color: "#1a1a1a" }}>{region.name}</h2>
-          <StatusBadge status={region.overall_status} />
         </div>
         <p style={{ fontSize: 13, color: "#555", margin: "0 0 6px" }}>
           Chair: <strong style={{ color: "#1a1a1a" }}>{region.chair}</strong>
@@ -644,10 +741,25 @@ function RegionDetail({ region, onBack, activeFocusFilters, setActiveFocusFilter
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 16 }}>
                 <div style={{ background: PAGE_BG, borderRadius: 10, padding: "1rem" }}>
                   <SectionLabel>Geography</SectionLabel>
+                  <p style={{ margin: "0 0 7px", fontSize: 11, color: "#999" }}>Select an area to filter the top employers below</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
-                    {region.counties.map(c => (
-                      <span key={c} style={{ fontSize: 12, background: "#fff", border: "1px solid #ddd", color: "#555", padding: "3px 9px", borderRadius: 10 }}>{c}</span>
-                    ))}
+                    {region.counties.map(c => {
+                      const isSelected = selectedCounty === c;
+                      return (
+                        <button key={c} onClick={() => setSelectedCounty(isSelected ? null : c)} style={{
+                          fontSize: 12, background: isSelected ? CMI_PINK : "#fff",
+                          border: `1.5px solid ${isSelected ? CMI_PINK : "#ddd"}`,
+                          color: isSelected ? "#fff" : "#555",
+                          padding: "3px 9px", borderRadius: 10, cursor: "pointer",
+                          fontWeight: isSelected ? 700 : 400, transition: "all 0.15s"
+                        }}>{c}</button>
+                      );
+                    })}
+                    {selectedCounty && (
+                      <button onClick={() => setSelectedCounty(null)} style={{ fontSize: 11, color: "#999", background: "transparent", border: "none", cursor: "pointer", padding: "3px 4px" }}>
+                        <i className="ti ti-x" style={{ fontSize: 11 }} /> Clear
+                      </button>
+                    )}
                   </div>
                 </div>
                 <div style={{ background: PAGE_BG, borderRadius: 10, padding: "1rem" }}>
@@ -658,16 +770,27 @@ function RegionDetail({ region, onBack, activeFocusFilters, setActiveFocusFilter
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 16 }}>
                 <div style={{ background: PAGE_BG, borderRadius: 10, padding: "1rem" }}>
-                  <SectionLabel>Top 5 employers in region</SectionLabel>
-                  {region.top_employers.map((e, i) => (
-                    <div key={i} style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 7 }}>
-                      <span style={{ width: 20, height: 20, borderRadius: "50%", background: CMI_PINK, color: "#fff", fontSize: 10, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{i + 1}</span>
-                      <div>
-                        <p style={{ margin: 0, fontSize: 13, fontWeight: 600, color: "#1a1a1a" }}>{e.name}</p>
-                        <p style={{ margin: 0, fontSize: 11, color: "#777" }}>{e.sector}</p>
+                  <SectionLabel>
+                    {selectedCounty
+                      ? `TOP 3 EMPLOYERS IN ${selectedCounty.toUpperCase()} (BASED ON NUMBER OF EMPLOYEES)`
+                      : "TOP 5 EMPLOYERS IN REGION (BASED ON NUMBER OF EMPLOYEES)"}
+                  </SectionLabel>
+                  {(() => {
+                    const list = selectedCounty
+                      ? (region.county_employers?.[selectedCounty] || [])
+                      : region.top_employers;
+                    return list.length > 0 ? list.map((e, i) => (
+                      <div key={i} style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 7 }}>
+                        <span style={{ width: 20, height: 20, borderRadius: "50%", background: CMI_PINK, color: "#fff", fontSize: 10, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{i + 1}</span>
+                        <div>
+                          <p style={{ margin: 0, fontSize: 13, fontWeight: 600, color: "#1a1a1a" }}>{e.name}</p>
+                          <p style={{ margin: 0, fontSize: 11, color: "#777" }}>{e.sector}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    )) : (
+                      <p style={{ fontSize: 13, color: "#999", margin: 0 }}>No employer data available for {selectedCounty}.</p>
+                    );
+                  })()}
                 </div>
                 <div style={{ background: PAGE_BG, borderRadius: 10, padding: "1rem" }}>
                   <SectionLabel>SME landscape</SectionLabel>
@@ -808,10 +931,13 @@ function RegionDetail({ region, onBack, activeFocusFilters, setActiveFocusFilter
               )}
 
               <div style={{ background: PAGE_BG, borderRadius: 8, padding: "0.75rem 1rem", marginTop: 16, border: "1px solid #e4e4e0" }}>
-                <p style={{ margin: 0, fontSize: 12, color: "#555" }}>
+                <p style={{ margin: "0 0 4px", fontSize: 12, fontWeight: 700, color: "#555" }}>
                   <i className="ti ti-info-circle" style={{ marginRight: 5 }} aria-hidden="true" />
-                  Have a lead? Contact <strong style={{ color: "#1a1a1a" }}>{region.chair}</strong> at{" "}
-                  <a href={`mailto:${region.contact_email}`} style={{ color: CMI_PINK }}>{region.contact_email}</a>
+                  Have a lead or want to make a referral?
+                </p>
+                <p style={{ margin: 0, fontSize: 12, color: "#555" }}>
+                  Contact <strong style={{ color: "#1a1a1a" }}>{region.cmi_contact.name}</strong>, {region.cmi_contact.title} at{" "}
+                  <a href={`mailto:${region.cmi_contact.email}`} style={{ color: CMI_PINK }}>{region.cmi_contact.email}</a>
                 </p>
               </div>
             </div>
